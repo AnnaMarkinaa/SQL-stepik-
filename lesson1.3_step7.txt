@@ -1,0 +1,14 @@
+Вариант1 HAVING
+
+SELECT ROUND(AVG(price), 2) AS Средняя_цена,
+    SUM(price*amount) AS Стоимость
+FROM book
+GROUP BY amount
+HAVING amount BETWEEN 5 AND 14;
+
+Вариант2 WHERE
+
+SELECT ROUND(AVG(price),2) AS Средняя_цена, 
+    SUM(price*amount) AS Стоимость
+FROM book
+WHERE amount BETWEEN 5 and 14;
